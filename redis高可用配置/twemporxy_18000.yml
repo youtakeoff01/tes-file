@@ -1,0 +1,17 @@
+redis_18000:
+  listen: 0.0.0.0:18000
+  hash: fnv1a_64
+  hash_tag: "{}"
+  timeout: 4000
+  backlog: 1024
+  preconnect: true
+  distribution: ketama
+  auto_eject_hosts: true
+  redis: true
+  server_retry_timeout: 5000
+  server_failure_limit: 10
+  servers:
+   - 172.26.38.69:8000:1
+   - 172.26.38.69:8001:1
+   - 172.26.38.69:8002:1
+
